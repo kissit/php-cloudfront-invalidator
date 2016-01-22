@@ -28,14 +28,14 @@ try {
 ```
 $this->load->library('cloudfront_invalidator');
 ```
-3. Set your AWS credentials and cloudfront distribution id.  Note, this could be passed to the load library call into constructor.
+3. Set your AWS credentials and cloudfront distribution id.  Note, this could also be passed to the load library call into constructor.
 ```
 $this->cloudfront_invalidator->setAwsInfo($aws_key, $aws_secret, $aws_dist_id);
 ```
 Make an invalidation
 ```
 try {
-    $invalidator->invalidate('/images/*');
+    $this->cloudfront_invalidator->invalidate('/images/*');
 } catch(Exception $e) {
     echo $e->getMessage() . "\n";
 }
