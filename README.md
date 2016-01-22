@@ -1,4 +1,4 @@
-## php-cloudfront-invalidate
+## php-cloudfront-invalidator
 
 A Lightweight PHP class for making AWS CloudFront Invalidation requests.
 
